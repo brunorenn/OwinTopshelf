@@ -17,7 +17,7 @@ namespace SelfHostingWebApiAndTopshelf
             Container = new Container();
             Container.Options.DefaultScopedLifestyle = new WebApiRequestLifestyle();
 
-            Container.Register<ITeste, Teste>(Lifestyle.Scoped);
+            Container.Register<ITest, Test>(Lifestyle.Scoped);
 
             app.UseOwinContextInjector(Container);
 

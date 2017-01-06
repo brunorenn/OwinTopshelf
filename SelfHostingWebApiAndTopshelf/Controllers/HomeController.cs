@@ -1,16 +1,15 @@
 ﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Newtonsoft.Json;
 using SelfHostingWebApiAndTopshelf.Interface;
 
 namespace SelfHostingWebApiAndTopshelf.Controllers
 {
     public class HomeController: ApiController
     {
-        private readonly ITeste _teste;
+        private readonly ITest _teste;
 
-        public HomeController(ITeste teste)
+        public HomeController(ITest teste)
         {
             _teste = teste;
         }
@@ -18,12 +17,12 @@ namespace SelfHostingWebApiAndTopshelf.Controllers
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var cache = Request.GetOwinContext().Get<string>("teste");
-            Request.GetOwinContext().Set("teste", "teste");
+            //var cache = Request.GetOwinContext().Get<string>("teste");
+            //Request.GetOwinContext().Set("teste", "teste");
             var result = new {Result = _teste.GetString()};
             return new HttpResponseMessage(HttpStatusCode.OK)
             {
-                Content = new StringContent(JsonConvert.SerializeObject(result))
+                Content = new StringContent(result.ToString())
             };
         }
     }

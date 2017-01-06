@@ -1,6 +1,6 @@
 ﻿namespace SelfHostingWebApiAndTopshelf.Interface
 {
-    public interface ITeste
+    public interface ITest
     {
         string GetString();
     }

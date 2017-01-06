@@ -2,7 +2,7 @@
 
 namespace SelfHostingWebApiAndTopshelf.Implementation
 {
-    public class Teste : ITeste
+    public class Test : ITest
     {
         public string GetString()
         {

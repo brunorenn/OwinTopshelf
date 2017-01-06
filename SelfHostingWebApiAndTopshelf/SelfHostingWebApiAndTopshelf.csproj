@@ -109,8 +109,8 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Implementation\Teste.cs" />
-    <Compile Include="Interface\ITeste.cs" />
+    <Compile Include="Implementation\Test.cs" />
+    <Compile Include="Interface\ITest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
